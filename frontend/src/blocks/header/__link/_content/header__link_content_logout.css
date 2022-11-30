@@ -1,0 +1,8 @@
+.header__link_content_logout {
+  color: #A9A9A9;
+  margin-left: 24px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}

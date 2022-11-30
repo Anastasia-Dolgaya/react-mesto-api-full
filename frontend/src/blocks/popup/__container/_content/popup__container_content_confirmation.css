@@ -1,0 +1,5 @@
+.popup__container_content_confirmation {
+  min-height: 181px;
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,14 @@
+.form_theme_dark {
+  width: 430px;
+  color: white;
+  margin: auto;
+  margin-top: 60px;
+
+}
+
+@media screen and (max-width: 570px) {
+  .form_theme_dark {
+    width: 100%;
+    margin-top: 40px;
+  }
+}

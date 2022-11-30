@@ -1,0 +1,15 @@
+.form__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  margin-top: 15px;
+  padding: 0;
+}
+
+@media screen and (max-width: 570px) {
+  .form__text {
+    margin-top: 20px;
+  }
+}

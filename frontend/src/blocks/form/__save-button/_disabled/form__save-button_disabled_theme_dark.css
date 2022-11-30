@@ -1,0 +1,4 @@
+.form__save-button_disabled_theme_dark {
+  pointer-events: none;
+  cursor: default;
+}

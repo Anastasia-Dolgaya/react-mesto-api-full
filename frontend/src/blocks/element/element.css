@@ -1,0 +1,9 @@
+.element {
+  width: 100%;
+  min-width: 0;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  position: relative;
+  font-size: 0;
+  padding: 0;
+}

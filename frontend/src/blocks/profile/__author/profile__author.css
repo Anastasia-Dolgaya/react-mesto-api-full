@@ -1,0 +1,24 @@
+.profile__author {
+  display: flex;
+  column-gap: 30px;
+}
+
+@media screen and (max-width: 750px) {
+  .profile__author {
+    column-gap: 15px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .profile__author {
+    column-gap: 10px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .profile__author {
+    flex-direction: column;
+    row-gap: 26px;
+    align-items: center;
+  }
+}

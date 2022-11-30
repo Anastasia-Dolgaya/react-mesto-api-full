@@ -1,0 +1,20 @@
+.page {
+  min-width: 320px;
+  max-width: 880px;
+  margin: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 920px) {
+  .page {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .page {
+    width: 100%;
+  }
+}
