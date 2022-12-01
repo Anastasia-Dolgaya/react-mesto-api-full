@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://localhost:3000';
+import { BASE_URL } from './apiConfig';
 
 export const register = (email, password) => {
   return fetch(`${BASE_URL}/signup`, {
@@ -7,6 +7,7 @@ export const register = (email, password) => {
       Accept: 'application/json',
       'Content-Type': 'application/json',
     },
+    credentials: 'include',
     body: JSON.stringify({ email, password }),
   })
     .then((response) => {
@@ -28,6 +29,7 @@ export const authorize = (email, password) => {
       Accept: 'application/json',
       'Content-Type': 'application/json',
     },
+    credentials: 'include',
     body: JSON.stringify({ email, password }),
   })
     .then((response) => {
@@ -35,10 +37,6 @@ export const authorize = (email, password) => {
     })
     .then((data) => {
       return data;
-      // if (data.token) {
-      //   localStorage.setItem('token', data.token);
-      //   return data;
-      // }
     });
 };
 
@@ -49,6 +47,7 @@ export const getContent = () => {
       Accept: 'application/json',
       'Content-Type': 'application/json',
     },
+    credentials: 'include',
   })
     .then((res) => res.json())
     .then((data) => data);

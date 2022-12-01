@@ -1,5 +1,6 @@
 const allowedCors = [
   'http://localhost:3000',
+  'http://leela.mesto.nomoredomains.club',
 ];
 
 // eslint-disable-next-line consistent-return

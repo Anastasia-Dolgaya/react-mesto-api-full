@@ -1,5 +1,7 @@
+export const BASE_URL = 'http://api.leela.mesto.nomoredomains.club';
+
 export const apiConfig = {
-  url: 'http://localhost:3000',
+  url: BASE_URL,
   headers: {
     'Content-Type': 'application/json',
   },
