@@ -28,8 +28,11 @@ app.use(
     preflightContinue: true,
     credentials: true,
     origin: allowedCors,
+    exposedHeaders: ['Link'],
   }),
 );
+
+app.options('*', cors());
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
