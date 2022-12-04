@@ -5,15 +5,30 @@ const cookieParser = require('cookie-parser');
 const { errors } = require('celebrate');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
+const { cors } = require('cors');
 const errorsHandler = require('./middlewares/errorsHandler');
 const { router } = require('./routes/index');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
-const { cors } = require('./middlewares/cors');
+// const { cors } = require('./middlewares/cors');
+const allowedCors = [
+  'http://localhost:3000',
+  'http://leela.mesto.nomoredomains.club',
+  'https://leela.mesto.nomoredomains.club',
+];
 
 const { PORT = 3000 } = process.env;
 
 const app = express();
-app.use(cors);
+// app.use(cors);
+
+app.enable('trust proxy');
+
+app.use(
+  cors({
+    credentials: true,
+    origin: allowedCors,
+  }),
+);
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
