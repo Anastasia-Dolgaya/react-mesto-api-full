@@ -25,6 +25,7 @@ app.enable('trust proxy');
 
 app.use(
   cors({
+    preflightContinue: true,
     credentials: true,
     origin: allowedCors,
   }),
