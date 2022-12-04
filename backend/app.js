@@ -10,11 +10,11 @@ const errorsHandler = require('./middlewares/errorsHandler');
 const { router } = require('./routes/index');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 // const { cors } = require('./middlewares/cors');
-const allowedCors = [
-  'http://localhost:3000',
-  'http://leela.mesto.nomoredomains.club',
-  'https://leela.mesto.nomoredomains.club',
-];
+// const allowedCors = [
+//   'http://localhost:3000',
+//   'http://leela.mesto.nomoredomains.club',
+//   'https://leela.mesto.nomoredomains.club',
+// ];
 
 const { PORT = 3000 } = process.env;
 
@@ -27,7 +27,7 @@ app.use(
   cors({
     preflightContinue: true,
     credentials: true,
-    origin: allowedCors,
+    origin: true,
     exposedHeaders: ['Link'],
   }),
 );
