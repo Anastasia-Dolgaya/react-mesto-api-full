@@ -6,6 +6,7 @@ const allowedCors = [
 
 // eslint-disable-next-line consistent-return
 module.exports.cors = (req, res, next) => {
+  console.dir(req.headers);
   const { origin } = req.headers;
   const { method } = req;
   const DEFAULT_ALLOWED_METHODS = 'GET,HEAD,PUT,PATCH,POST,DELETE';
