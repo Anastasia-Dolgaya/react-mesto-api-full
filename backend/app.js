@@ -27,7 +27,7 @@ app.enable('trust proxy');
 //   cors({
 //     preflightContinue: true,
 //     credentials: true,
-//     origin: true,
+//     origin: allowedCors,
 //     exposedHeaders: ['Link'],
 //   }),
 // );
