@@ -122,7 +122,7 @@ function App() {
     auth.getContent().then((res) => {
       if (res._id) {
         setLoggedIn(true);
-        setEmail(res.data.email);
+        setEmail(res.email);
         history.push('/');
       } else {
         history.push('/signin');
