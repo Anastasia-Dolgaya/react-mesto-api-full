@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://api.leela.mesto.nomoredomains.club';
+export const BASE_URL = 'https://api.leela.mesto.nomoredomains.club';
 
 export const apiConfig = {
   url: BASE_URL,
