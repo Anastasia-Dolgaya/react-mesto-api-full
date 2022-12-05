@@ -120,7 +120,7 @@ function App() {
 
   function handleLoginCheck() {
     auth.getContent().then((res) => {
-      if (res.code === 200) {
+      if (res.status === 200) {
         setLoggedIn(true);
         setEmail(res.data.email);
         history.push('/');
