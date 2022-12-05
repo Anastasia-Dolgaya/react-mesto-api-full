@@ -42,6 +42,11 @@ function App() {
 
   useEffect(() => {
     handleLoginCheck();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // fetch initial data
+  useEffect(() => {
     if (loggedIn) {
       api
         .fetchUserData()
@@ -61,30 +66,7 @@ function App() {
         .catch((err) => console.log(`Ошибка: ${err}`));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  // // fetch initial data
-  // useEffect(() => {
-  //   if (loggedIn) {
-  //     api
-  //       .fetchUserData()
-  //       .then((res) => {
-  //         setCurrentUser({ ...currentUser, ...res });
-  //       })
-  //       .catch((err) => console.log(`Ошибка: ${err}`))
-  //       .finally(() => {
-  //         setIsLoading(false);
-  //       });
-
-  //     api
-  //       .fetchInitialCards()
-  //       .then((res) => {
-  //         setCards(res);
-  //       })
-  //       .catch((err) => console.log(`Ошибка: ${err}`));
-  //   }
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, [loggedIn]);
+  }, [loggedIn]);
 
   // open popups
   function handleEditProfileClick() {
