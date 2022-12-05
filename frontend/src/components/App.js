@@ -134,6 +134,7 @@ function App() {
     api
       .signout()
       .then(() => {
+        setLoggedIn(false);
         history.push('/signin');
       })
       .catch((err) => console.log(`Ошибка: ${err}`));
