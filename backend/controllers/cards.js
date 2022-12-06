@@ -20,11 +20,7 @@ module.exports.createCard = (req, res, next) => {
   });
 
   newCard.save()
-    .then(() => {
-      Card
-        .populate(newCard, { path: 'owner' })
-        .then((c) => res.send(c));
-    })
+    .then((c) => res.send(c))
     .catch((err) => {
       if (err.name === 'ValidationError') {
         // 400

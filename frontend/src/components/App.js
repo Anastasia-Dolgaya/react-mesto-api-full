@@ -97,8 +97,8 @@ function App() {
     });
   }
 
-  function handleLoginError(err) {
-    setInfoTooltipOpen({ open: true, registered: false, text: err });
+  function handleLoginError() {
+    setInfoTooltipOpen({ open: true, registered: false, text: 'Неправильный email или пароль.' });
   }
 
   function handleRegistration(email, password) {
