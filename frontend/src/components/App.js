@@ -86,11 +86,19 @@ function App() {
   }
   // authorization
   function handleRegisterSuccess() {
-    setInfoTooltipOpen({ open: true, registered: true });
+    setInfoTooltipOpen({ open: true, registered: true, text: 'Вы успешно зарегистрировались!' });
   }
 
   function handleRegisterError() {
-    setInfoTooltipOpen({ open: true, registered: false });
+    setInfoTooltipOpen({
+      open: true,
+      registered: false,
+      text: 'Что-то пошло не так! Попробуйте ещё раз.',
+    });
+  }
+
+  function handleLoginError(err) {
+    setInfoTooltipOpen({ open: true, registered: false, text: err });
   }
 
   function handleRegistration(email, password) {
@@ -115,7 +123,10 @@ function App() {
         password.setValue('');
         history.push('/');
       })
-      .catch((err) => console.log(`Ошибка: ${err}`));
+      .catch((err) => {
+        console.log(`Ошибка: ${err}`);
+        handleLoginError(err);
+      });
   }
 
   function handleLoginCheck() {

@@ -27,13 +27,13 @@ app.use(cookieParser());
 
 app.use(helmet());
 
+app.use(requestLogger);
+
 app.use(limiter);
 
 mongoose.connect('mongodb://localhost:27017/mestodb', {
   useNewUrlParser: true,
 });
-
-app.use(requestLogger);
 
 app.get('/crash-test', () => {
   setTimeout(() => {
