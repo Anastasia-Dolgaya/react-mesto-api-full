@@ -306,6 +306,7 @@ function App() {
           <InfoTooltip
             registered={isInfoTooltipOpen.registered}
             isOpen={isInfoTooltipOpen.open}
+            text={isInfoTooltipOpen.text}
             onClose={closeAllPopups}
           />
         )}
